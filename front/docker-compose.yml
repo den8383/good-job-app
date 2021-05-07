@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nextjs:
+    build: ./Dockerfiles/node/
+    container_name: nextjs-ts
+    tty: true
+    volumes:
+      #- ./:/usr/src/app
+      - ./app/:/usr/src/app
+    command: npm run dev
+    ports:
+      - "1234:8080"
+      - "2345:5000"
+      - "3456:3000"

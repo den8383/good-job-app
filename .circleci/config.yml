@@ -16,7 +16,7 @@ jobs:
           fingerprints:
             - "5f:bb:8e:67:78:cb:14:43:b6:8a:ce:7e:72:b2:6e:4e"
       - run: ssh ${USER_NAME}@${HOST_NAME} 'cd good-job-app && git pull origin main'
-      - run: ssh ${USER_NAME}@${HOST_NAME} 'docker-compose up'
+      - run: ssh ${USER_NAME}@${HOST_NAME} 'cd good-job-app/front docker-compose up'
 
 workflows:
   version: 2.1

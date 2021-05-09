@@ -7,5 +7,6 @@ services:
     volumes:
       #- ./:/usr/src/app
       - ./app/:/usr/src/app
+    command: npm run dev
     ports:
       - "3000:3000"

@@ -4,7 +4,7 @@ services:
     build: ./docker/golang/
     tty: true
     volumes:
-      - .:/go/src/charts_server
+      - .:/go/src/app
     ports:
       - "8080:8000"
     depends_on:
